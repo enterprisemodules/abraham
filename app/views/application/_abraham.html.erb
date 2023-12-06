@@ -25,9 +25,9 @@
   Abraham.tours["<%= tour_name %>"].addStep({
     id: 'step-<%= key %>',
     <% if step.key?('title') %>
-    title: "<%= step['title'] %>",
+    title: `<%= step['title'] %>`,
     <% end %>
-    text: "<%= step['text'] %>",
+    text: `<%= step['text'] %>`,
     <% if step.key?('attachTo') %>
     attachTo: { element: "<%= escape_javascript(step['attachTo']['element'].html_safe) %>", on: "<%= step['attachTo']['placement'] %>" },
     showOn: function() {
